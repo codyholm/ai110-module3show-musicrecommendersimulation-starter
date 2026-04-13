@@ -9,3 +9,11 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
 9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
 10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
+11,City Afterglow,Glass Harbor,electronic,upbeat,0.86,126,0.79,0.90,0.12
+12,Porchlight Letters,June Maple,acoustic,melancholy,0.27,74,0.32,0.29,0.96
+13,Subway Static,Meter North,hip hop,focused,0.67,98,0.58,0.84,0.17
+14,Canyon Morning,Juniper Vale,acoustic,relaxed,0.22,66,0.62,0.24,0.97
+15,Broken Neon,Vector Bloom,electronic,moody,0.73,112,0.44,0.77,0.14
+16,Backseat Freestyle,Meter North,hip hop,intense,0.81,104,0.66,0.87,0.09
+17,Summer Polaroid,The Daydreams,pop,upbeat,0.84,122,0.88,0.86,0.20
+18,Quiet Exit,Paper House,indie pop,melancholy,0.41,88,0.46,0.52,0.58
