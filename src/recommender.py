@@ -54,10 +54,7 @@ class Recommender:
         return "Explanation placeholder"
 
 def load_songs(csv_path: str) -> List[Dict]:
-    """
-    Loads songs from a CSV file.
-    Required by src/main.py
-    """
+    """Load songs from a CSV file into a list of dictionaries."""
     songs: List[Dict] = []
 
     with open(csv_path, newline="", encoding="utf-8") as csv_file:
@@ -76,10 +73,12 @@ def load_songs(csv_path: str) -> List[Dict]:
 
 
 def _clamp_similarity(value: float) -> float:
+    """Clamp a similarity score to the 0.0 to 1.0 range."""
     return max(0.0, min(value, 1.0))
 
 
 def _get_user_pref(user_prefs: Dict[str, Any], *keys: str) -> Optional[Any]:
+    """Return the first available user preference from a list of keys."""
     for key in keys:
         if key in user_prefs and user_prefs[key] is not None:
             return user_prefs[key]
@@ -87,9 +86,7 @@ def _get_user_pref(user_prefs: Dict[str, Any], *keys: str) -> Optional[Any]:
 
 
 def score_song(user_prefs: Dict[str, Any], song: Dict[str, Any]) -> Tuple[float, List[str]]:
-    """
-    Scores one song against a user's preferences and returns reasons.
-    """
+    """Score one song against a user's preferences and explain why."""
     score = 0.0
     reasons: List[str] = []
 
@@ -136,11 +133,9 @@ def score_song(user_prefs: Dict[str, Any], song: Dict[str, Any]) -> Tuple[float,
 
     return score, reasons
 
+
 def recommend_songs(user_prefs: Dict, songs: List[Dict], k: int = 5) -> List[Tuple[Dict, float, str]]:
-    """
-    Functional implementation of the recommendation logic.
-    Required by src/main.py
-    """
+    """Rank all songs for a user and return the top recommendations."""
     scored_songs: List[Tuple[Dict, float, str]] = []
 
     for song in songs:
